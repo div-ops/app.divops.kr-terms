@@ -21,8 +21,8 @@ jobs:
 
       - name: "commit to deploy"
         run: |
-          git config --local user.name "creaticoding"
-          git config --local user.email "seokho.jeong@toss.im"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           ORIGIN_COMMIT="${{github.event.head_commit.message}}"
           COMMIT=$(node -p "\"$ORIGIN_COMMIT\".replace(/\[skip vercel\]/g, '')")
