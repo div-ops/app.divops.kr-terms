@@ -37,8 +37,8 @@ next-env.d.ts
 
 .config
 
-.pnp.*
 .yarn/*
+!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
