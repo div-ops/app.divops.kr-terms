@@ -16,7 +16,7 @@ jobs:
           submodules: true
       - name: "[convert to single project] install lock file and add workspaces in package.json"
         run: |
-          ./lock-install.sh
+          ./.scripts/lock-install.sh
 
       - name: "commit to deploy"
         run: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: "[revert to mono project] remove lock file and remove workspaces in package.json"
         run: |
-          ./lock-remove.sh
+          ./.scripts/lock-remove.sh
 
       - name: "clean up code"
         run: |
