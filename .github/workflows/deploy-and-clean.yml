@@ -25,7 +25,7 @@ jobs:
           git add -A
           ORIGIN_COMMIT="${{github.event.head_commit.message}}"
           COMMIT=$(node -p "\"$ORIGIN_COMMIT\".replace(/\[skip vercel\]/g, '')")
-          git -c core.hookspath=/dev/null commit -m $COMMIT
+          git -c core.hookspath=/dev/null commit -m "$COMMIT"
           git push origin HEAD
   clean-file:
     if: (!contains(github.event.head_commit.message, 'skip vercel'))
