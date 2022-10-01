@@ -1,6 +1,9 @@
 {
   "name": "@divops/app.divops.kr-hello-world",
   "private": true,
+  "workspaces": [
+    "shared/*"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

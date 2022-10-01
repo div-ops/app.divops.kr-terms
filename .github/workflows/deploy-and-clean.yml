@@ -14,6 +14,9 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           submodules: true
+      - name: update yarn scripts
+        run: |
+          yarn config-cli
       - name: "[convert to single project] install lock file and add workspaces in package.json"
         run: |
           ./.scripts/lock-install.sh
@@ -36,6 +39,9 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           submodules: true
+      - name: update yarn scripts
+        run: |
+          yarn config-cli
 
       - name: "[revert to mono project] remove lock file and remove workspaces in package.json"
         run: |
