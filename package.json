@@ -1,5 +1,5 @@
 {
-  "name": "@divops/app.divops.kr-hello-world",
+  "name": "@divops/app.divops.kr-terms",
   "private": true,
   "scripts": {
     "dev": "next dev",
